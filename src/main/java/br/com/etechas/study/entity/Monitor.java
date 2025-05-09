@@ -14,14 +14,23 @@ public class Monitor {
     @Id //Define a chave primária (PK)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_DISCIPLINA")
+    private Disciplina disciplina;
+
     @Column(name = "TX_NOME")
     private String nome;
+
     @Column(name = "TX_FOTO")
     private String foto;
+
     @Column(name = "TX_WHATSAPP")
     private String whatsapp;
+
     @Column(name = "TX_EMAIL")
     private String email;
+
     @Column(name = "TX_CONTEUDO")
     private String conteudo;
 
