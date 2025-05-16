@@ -19,6 +19,7 @@ public class Conexao {
 
     @Column(name = "DT_CRIACAO")
     private LocalDateTime dtCriacao;
+
     @ManyToOne
     @JoinColumn(name = "ID_MONITOR")
     private Monitor monitor;
