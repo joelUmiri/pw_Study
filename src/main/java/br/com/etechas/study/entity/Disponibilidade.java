@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Entity
@@ -18,10 +20,10 @@ public class Disponibilidade {
     private Long id;
 
     @Column(name = "DT_DAS")
-    private LocalDate dtDas;
+    private LocalDateTime dtDas;
 
     @Column(name = "DT_ATE")
-    private LocalDate dtAte;
+    private LocalDateTime dtAte;
 
     @Column(name = "TX_DIA_SEMANA")
     @Enumerated(EnumType.STRING)
